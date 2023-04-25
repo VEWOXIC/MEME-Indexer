@@ -64,34 +64,34 @@ class HomeFragment : Fragment() {
             binding.swipeRefreshLayout.isRefreshing = false
         }
         binding.floatingButton.setOnClickListener {
-//            selectDirectory()
-            val builder = AlertDialog.Builder(requireContext())
-            builder.setTitle("Add new path")
-
-            val input = EditText(requireContext())
-            input.setText("storage/emulated/0/Pictures") // 默认值
-            builder.setView(input)
-
-            builder.setPositiveButton("OK") { _, _ ->
-                val newItem = input.text.toString()
-                if (newItem in mainActivity.pathList)
-                    Toast.makeText(requireContext(), "Duplicated path", Toast.LENGTH_SHORT).show()
-                else
-                {
-                    if (File(newItem).isDirectory){
-                    adapter.add(newItem)
-                    (binding.listview1.adapter as ArrayAdapter<String>).notifyDataSetChanged()
-                    }
-                    else
-                        Toast.makeText(requireContext(), "Cannot find path"+newItem, Toast.LENGTH_SHORT).show()
-                }
-
-            }
-            builder.setNegativeButton("Cancel") { dialog, _ ->
-                dialog.cancel()
-            }
-
-            builder.show()
+            selectDirectory()
+//            val builder = AlertDialog.Builder(requireContext())
+//            builder.setTitle("Add new path")
+//
+//            val input = EditText(requireContext())
+//            input.setText("storage/emulated/0/Pictures") // 默认值
+//            builder.setView(input)
+//
+//            builder.setPositiveButton("OK") { _, _ ->
+//                val newItem = input.text.toString()
+//                if (newItem in mainActivity.pathList)
+//                    Toast.makeText(requireContext(), "Duplicated path", Toast.LENGTH_SHORT).show()
+//                else
+//                {
+//                    if (File(newItem).isDirectory){
+//                    adapter.add(newItem)
+//                    (binding.listview1.adapter as ArrayAdapter<String>).notifyDataSetChanged()
+//                    }
+//                    else
+//                        Toast.makeText(requireContext(), "Cannot find path"+newItem, Toast.LENGTH_SHORT).show()
+//                }
+//
+//            }
+//            builder.setNegativeButton("Cancel") { dialog, _ ->
+//                dialog.cancel()
+//            }
+//
+//            builder.show()
         }
         binding.listview1.setOnItemClickListener { parent, view, position, id ->
             val clickedPath = mainActivity.pathList[position]
@@ -127,13 +127,28 @@ class HomeFragment : Fragment() {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == PICK_DIRECTORY && resultCode == Activity.RESULT_OK) {
             val uri = data?.data ?: return
-            val selectedDir = DocumentFile.fromTreeUri(requireContext(), uri) ?: return
-            val selectedDirPath = selectedDir.uri.path ?: return
+            var selectedDirPath = uri.path ?: return
+            // replace the first /tree/primary: with /storage/emulated/0/
+            selectedDirPath = selectedDirPath.replaceFirst("/tree/primary:", "/storage/emulated/0/")
+            if (selectedDirPath in mainActivity.pathList)
+                    Toast.makeText(requireContext(), "Duplicated path", Toast.LENGTH_SHORT).show()
+                else
+                {
+                    if (File(selectedDirPath).isDirectory){
+//                    adapter.add(selectedDirPath)
+//                    (binding.listview1.adapter as ArrayAdapter<String>).notifyDataSetChanged()
+                        val adapter = binding.listview1.adapter as? ArrayAdapter<String>
+                        adapter?.add(selectedDirPath)
+                        adapter?.notifyDataSetChanged()
+                    }
+                    else
+                        Toast.makeText(requireContext(), "Cannot find path"+selectedDirPath, Toast.LENGTH_SHORT).show()
+                }
+//            val selectedDir = DocumentFile.fromTreeUri(requireContext(), uri) ?: return
+//            val selectedDirPath = selectedDir.uri.path ?: return
 //            val selectedDirPath = uri.toString()
 //            // 将所选目录添加到 ListView 中
-            val adapter = binding.listview1.adapter as? ArrayAdapter<String>
-            adapter?.add(selectedDirPath)
-            adapter?.notifyDataSetChanged()
+
         }
     }
 
