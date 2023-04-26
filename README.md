@@ -68,6 +68,7 @@ This is a pre-release version, you may need to agree to install the app from an 
 
 I am still a full-time PhD student, the maintainance may not be in time. I finish this app in 1 week with the help of ChatGPT. 
 
+- [ ] iOS app is still in development. 
 - [ ] Batchity the index building process. 
 - [ ] Make it look better. 
 - [ ] Maybe personalize the searching result on your device. 
