@@ -40,9 +40,10 @@ This is a pre-release version, you may need to agree to install the app from an 
 ## Future plan
 
 I am still a full-time PhD student, the maintainance may not be in time. 
-[ ] Batchity the index building process. 
-[ ] Make it look better. 
-[ ] Maybe personalize the searching result on your device. 
+
+- [ ] Batchity the index building process. 
+- [ ] Make it look better. 
+- [ ] Maybe personalize the searching result on your device. 
 
 
 ## Privacy Concerns
