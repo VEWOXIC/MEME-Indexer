@@ -39,7 +39,7 @@ This is a pre-release version, you may need to agree to install the app from an 
 
 ## Future plan
 
-I am still a full-time PhD student, the maintainance may not be in time. 
+I am still a full-time PhD student, the maintainance may not be in time. I finish this app in 1 week with the help of ChatGPT. 
 
 - [ ] Batchity the index building process. 
 - [ ] Make it look better. 
@@ -55,6 +55,10 @@ We still recommand not to upload your personal photos (you can anyway).
 Furthermore, you can always set up your own server! 
 
 **We do not gurantee other servers do not gather your information. **
+
+## Acknowledgement
+
+- ChatGPT
 
 
 
