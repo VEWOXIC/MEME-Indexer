@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
     var imagepaths: MutableList<String> = mutableListOf()
     var indexmap: MutableMap<String, FloatArray> = mutableMapOf()
     var CNindexmap: MutableMap<String, FloatArray> = mutableMapOf()
-    var queryurl: String = "https://3542794fy3.imdo.co/api/process"
+    var queryurl: String = "https://7b29232h51.goho.co/api/process"
     val sharedPref: SharedPreferences by lazy { getPreferences(Context.MODE_PRIVATE) }
     var indexQueue: MutableList<String> = mutableListOf()
 
@@ -63,6 +63,7 @@ class MainActivity : AppCompatActivity() {
        val queryUrlraw = sharedPref.getString("queryurl", null)
        if (queryUrlraw != null) {
            queryurl = queryUrlraw
+           Toast.makeText(this, "queryurl: $queryurl", Toast.LENGTH_SHORT).show()
        }
 
 
@@ -135,20 +136,20 @@ class MainActivity : AppCompatActivity() {
             putString("pathList", pathListjsonString)
             putString("indexmap", indexmapjsonString)
             putString("CNindexmap", CNindexmapjsonString)
-            putString("queryurl", queryurl)
+//            putString("queryurl", queryurl)
             apply()
         }
     }
 
 
-//    override fun onResume() {
-//        super.onResume()
-//        val sharedPref = getPreferences(Context.MODE_PRIVATE)
-//        val jsonString = sharedPref.getString("pathList", null)
-//        if (jsonString != null) {
-//            pathList = Gson().fromJson(jsonString, object : TypeToken<MutableList<String>>() {}.type)
-//        }
-//    }
+    override fun onResume() {
+        super.onResume()
+        val sharedPref = getPreferences(Context.MODE_PRIVATE)
+        val jsonString = sharedPref.getString("queryurl", null)
+        if (jsonString != null) {
+            queryurl = jsonString
+        }
+    }
 
 
 }
@@ -164,14 +165,15 @@ class SettingsActivity : AppCompatActivity() {
         // reference the mainActivity
         title = "Settings"
 
-        val sharedPref = getPreferences(Context.MODE_PRIVATE)
-        val queryUrlraw = sharedPref.getString("queryurl", "https://3542794fy3.imdo.co/api/process")
+        var sharedPref = getPreferences(Context.MODE_PRIVATE)
+//        val queryUrlraw = sharedPref.getString("queryurl", "https://3542794fy3.imdo.co/api/process")
 
 
         val optionList: List<String> = listOf("Server Address", "Language", "Clear Index")
         val adapter: ArrayAdapter<String> = ArrayAdapter<Any?>(this, android.R.layout.simple_list_item_1, optionList) as ArrayAdapter<String>
         val listView = findViewById<ListView>(R.id.settingListView)
         listView.adapter = adapter
+        Toast.makeText(this, sharedPref.getString("queryurl", "Not Set"), Toast.LENGTH_SHORT).show()
 
         listView.setOnItemClickListener { parent, view, position, id ->
             val clickedenrty = parent.getItemAtPosition(position) as String
@@ -183,7 +185,7 @@ class SettingsActivity : AppCompatActivity() {
                 builder.setTitle("Add new path")
 
                 val input = EditText(this)
-                input.setText(sharedPref.getString("queryurl", "https://3542794fy3.imdo.co/api/process")) // 默认值
+                input.setText(sharedPref.getString("queryurl", "Not Set")) // 默认值
                 builder.setView(input)
 
                 builder.setPositiveButton("OK") { _, _ ->

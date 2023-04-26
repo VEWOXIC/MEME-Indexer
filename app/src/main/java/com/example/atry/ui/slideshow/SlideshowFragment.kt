@@ -96,7 +96,7 @@ class SlideshowFragment : Fragment() {
 
         resultGridView.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _ ->
             val imagePath = binding.resultGridView.adapter.getItem(position).toString()
-            Toast.makeText(context, imagePath, Toast.LENGTH_SHORT).show()
+//            Toast.makeText(context, imagePath, Toast.LENGTH_SHORT).show()
             shareImage(requireContext(), imagePath)
             Log.d("GalleryFragment", imagePath)
 
@@ -139,14 +139,12 @@ class SlideshowFragment : Fragment() {
 //        }
 
     fun getTextEmbedding(text: String, listener: OnTextEmbeddingResultListener) {
-
-        val url = mainActivity.sharedPref.getString("queryurl", "https://3542794fy3.imdo.co/api/process")
+        val url = mainActivity.sharedPref.getString("queryurl", "https://7b29232h51.goho.co/api/process")
+        Toast.makeText(mainActivity, url, Toast.LENGTH_LONG).show()
         val data = JSONObject().apply { put("text", text) }
-//        Toast.makeText(mainActivity, data.toString(), Toast.LENGTH_LONG).show()
         val request = JsonObjectRequest(Request.Method.POST, url, data,
             { response ->
                 val resultArray = response.optJSONArray("result_text")
-//                Toast.makeText(mainActivity, resultArray.toString(), Toast.LENGTH_LONG).show()
                 if (resultArray != null) {
                     val result = FloatArray(resultArray.length())
                     for (i in 0 until resultArray.length()) {
