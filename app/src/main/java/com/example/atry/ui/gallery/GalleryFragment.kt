@@ -239,6 +239,7 @@ class GalleryFragment : Fragment() {
 
     fun getImageEmbedding(imagePath: String, listener: OnImageEmbeddingResultListener) {
         val url = mainActivity.sharedPref.getString("queryurl", "https://7b29232h51.goho.co/api/process")
+//        val url=mainActivity.queryurl
         val data = JSONObject()
         val imageFile = File(imagePath)
         val encodedImage = resizeImage(imageFile, 224)

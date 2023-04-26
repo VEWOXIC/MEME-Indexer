@@ -140,7 +140,8 @@ class SlideshowFragment : Fragment() {
 
     fun getTextEmbedding(text: String, listener: OnTextEmbeddingResultListener) {
         val url = mainActivity.sharedPref.getString("queryurl", "https://7b29232h51.goho.co/api/process")
-        Toast.makeText(mainActivity, url, Toast.LENGTH_LONG).show()
+//        Toast.makeText(mainActivity, url, Toast.LENGTH_LONG).show()
+//        val url = mainActivity.queryurl
         val data = JSONObject().apply { put("text", text) }
         val request = JsonObjectRequest(Request.Method.POST, url, data,
             { response ->
