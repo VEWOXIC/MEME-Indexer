@@ -1,11 +1,13 @@
 # MEME-Indexer 📷🔍
 
-A CLIP-based meme indexer app that can manage and search your meme repository with natural language! 
+A CLIP-based meme indexer app that can manage and search your memes on your phone with natural language! 
 
 **Never be without the perfect meme again!** 😎
 
 ![](./imgs/have_a_meme.jpg)
 > Wait, I have a meme for this! 🤣
+
+(Also applicatable to any images, not just memes 🤫)
 
 ## Feature ✨
 
