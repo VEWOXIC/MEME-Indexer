@@ -1,6 +1,6 @@
 # MEME-Indexer 📷🔍
 
-A CLIP-based meme indexer app that can manage and search your memes on your phone with natural language! 
+A CLIP-based meme indexer app that can manage and search the memes on your phone with natural language! 
 
 **Never be without the perfect meme again!** 😎
 
