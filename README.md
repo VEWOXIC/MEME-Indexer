@@ -22,13 +22,37 @@ This is a pre-release version, you may need to agree to install the app from an 
 ## Quick Start
 
 - Permit the storage access. 
+<div align="center">
+<img src=./imgs/File_access.png width=30% />
+</div>
+
 - Go to the "**Add Folder**" page, press the "**+**" button on the botton right to select the folder with images you want to index. 
+
+<div align="center">
+<img src=./imgs/add_folder.gif width=30% />
+</div>
+
 - Go to "**Gallary**" page and you will find the images are loaded. 
 - Press start button to start create index for images. 
+
+<div align="center">
+<img src=./imgs/Create_index.gif width=30% />
+</div>
+
 - You can filter to check the indexed images. 
+
+<div align="center">
+<img src=./imgs/Filter.gif width=30% />
+</div>
+
 - Go to "**Search**" page and describe your image with natural language, Chinese/English both ok. 
 - Press "**Search**" to get the query embedding. It will sort your gallary according to semantic correlation. 
 - Press any image to call the share function. 
+
+<div align="center">
+<img src=./imgs/search.gif width=30% />
+</div>
+
 - Send it! 
 
 ## Settings
@@ -59,6 +83,7 @@ Furthermore, you can always set up your own server!
 ## Acknowledgement
 
 - ChatGPT
+- @xywen97
 
 
 
