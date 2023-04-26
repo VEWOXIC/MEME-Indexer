@@ -9,7 +9,7 @@ Make you never
 
 ## Installation
 
-Download APK file ![here](https://github.com/VEWOXIC/MEME-Indexer/releases). 
+Download APK file [here](https://github.com/VEWOXIC/MEME-Indexer/releases). 
 
 This is a pre-release version, you may need to agree to install the app from an unidentified developer.
 
