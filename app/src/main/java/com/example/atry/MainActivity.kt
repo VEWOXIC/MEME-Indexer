@@ -60,10 +60,10 @@ class MainActivity : AppCompatActivity() {
         if (CNindexmapjsonString != null) {
             CNindexmap = Gson().fromJson(CNindexmapjsonString, object : TypeToken<MutableMap<String, FloatArray>>() {}.type)
         }
-//        val queryUrlraw = sharedPref.getString("queryurl", null)
-//        if (queryUrlraw != null) {
-//            queryurl = queryUrlraw
-//        }
+       val queryUrlraw = sharedPref.getString("queryurl", null)
+       if (queryUrlraw != null) {
+           queryurl = queryUrlraw
+       }
 
 
         binding = ActivityMainBinding.inflate(layoutInflater)
