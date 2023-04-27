@@ -12,6 +12,7 @@ A CLIP-based meme indexer app that can manage and search the memes on your phone
 ## Feature ✨
 
 - Support searching your image using both Chinese and English 🌍
+- Directly send it to your chat app! WeChat or WhatsApp! 🚀
 - We provide a backend server with CN-CLIP-Large model, you can directly use it to get image/text embedding for image index and query 🔧
 - You can set up your own CLIP back end server! You can find backend code [here](https://github.com/xywen97/cn_clip_server). Of course, we encourage everyone to share their server 🤝
 - Efficient enough. With 2k images indexed, MEME Indexer only takes about 30MB stoarge 🚀
@@ -56,7 +57,7 @@ This is a pre-release version, you may need to agree to install the app from an 
 <img src=./imgs/search.gif width=30% />
 </div>
 
-- Send it! 🚀
+- Send it to WeChat, WhatsApp! 🚀
 
 ## Settings ⚙️
 
