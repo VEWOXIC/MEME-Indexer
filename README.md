@@ -25,6 +25,8 @@ This is a pre-release version, you may need to agree to install the app from an 
 
 ## Quick Start 🚀
 
+Video demo [在相册里翻找梗图× 直接用语言检索梗图√](https://www.bilibili.com/video/BV1y14y1Z7DT/?share_source=copy_web&vd_source=b327831050842b9cae04db313047af6a) !
+
 - Permit the storage access 📂
 <div align="center">
 <img src=./imgs/File_access.png width=30% />
