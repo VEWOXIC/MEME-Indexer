@@ -13,9 +13,9 @@ A CLIP-based meme indexer app that can manage and search the memes on your phone
 
 The original CLIP backend server stops for service. The new server address is as below: 
 
-'''bash
+```bash
 http://202.79.96.144:50547/api/process
-'''
+```
 
 Please go to settings->server address to change it! Note that v0.2.0 does not support plaintext http connection, please upgrade to v0.2.1. 
 
