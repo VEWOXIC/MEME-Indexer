@@ -11,6 +11,8 @@ A CLIP-based meme indexer app that can manage and search the memes on your phone
 
 ## NEW SERVER ADDRESS!!!
 
+> July 17 2023
+
 The original CLIP backend server stops for service. The new server address is as below: 
 
 ```bash
