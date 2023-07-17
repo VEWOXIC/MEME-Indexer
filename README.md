@@ -1,6 +1,6 @@
 # MEME-Indexer 📷🔍
 
-A CLIP-based meme indexer app that can manage and search your memes on your phone with natural language! 
+A CLIP-based meme indexer app that can manage and search the memes on your phone with natural language! 
 
 **Never be without the perfect meme again!** 😎
 
@@ -12,6 +12,7 @@ A CLIP-based meme indexer app that can manage and search your memes on your phon
 ## Feature ✨
 
 - Support searching your image using both Chinese and English 🌍
+- Directly send it to your chat app! WeChat or WhatsApp! 🚀
 - We provide a backend server with CN-CLIP-Large model, you can directly use it to get image/text embedding for image index and query 🔧
 - You can set up your own CLIP back end server! You can find backend code [here](https://github.com/xywen97/cn_clip_server). Of course, we encourage everyone to share their server 🤝
 - Efficient enough. With 2k images indexed, MEME Indexer only takes about 30MB stoarge 🚀
@@ -23,6 +24,8 @@ Download APK file [here](https://github.com/VEWOXIC/MEME-Indexer/releases).
 This is a pre-release version, you may need to agree to install the app from an unidentified developer 🙈
 
 ## Quick Start 🚀
+
+Video demo [在相册里翻找梗图× 直接用语言检索梗图√](https://www.bilibili.com/video/BV1y14y1Z7DT/?share_source=copy_web&vd_source=b327831050842b9cae04db313047af6a) !
 
 - Permit the storage access 📂
 <div align="center">
@@ -56,7 +59,7 @@ This is a pre-release version, you may need to agree to install the app from an 
 <img src=./imgs/search.gif width=30% />
 </div>
 
-- Send it! 🚀
+- Send it to WeChat, WhatsApp! 🚀
 
 ## Settings ⚙️
 
@@ -68,6 +71,7 @@ This is a pre-release version, you may need to agree to install the app from an 
 
 I am still a full-time PhD student, the maintainance may not be in time. I finish this app in 1 week with the help of ChatGPT. 
 
+- [ ] iOS app is still in development. 
 - [ ] Batchity the index building process. 
 - [ ] Make it look better. 
 - [ ] Maybe personalize the searching result on your device. 
