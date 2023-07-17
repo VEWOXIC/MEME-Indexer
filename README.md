@@ -9,6 +9,16 @@ A CLIP-based meme indexer app that can manage and search the memes on your phone
 
 (Also applicatable to any images, not just memes 🤫)
 
+## NEW SERVER ADDRESS!!!
+
+The original CLIP backend server stops for service. The new server address is as below: 
+
+'''
+http://202.79.96.144:50547/api/process
+'''
+
+Please go to settings->server address to change it! Note that v0.2.0 does not support plaintext http connection, please upgrade to v0.2.1. 
+
 ## Feature ✨
 
 - Support searching your image using both Chinese and English 🌍
