@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
     var imagepaths: MutableList<String> = mutableListOf()
     var indexmap: MutableMap<String, FloatArray> = mutableMapOf()
     var CNindexmap: MutableMap<String, FloatArray> = mutableMapOf()
-    var queryurl: String = "https://7b29232h51.goho.co/api/process"
+    var queryurl: String = "http://202.79.96.144:50547/api/process"
     val sharedPref: SharedPreferences by lazy { getSharedPreferences("MEME", Context.MODE_PRIVATE) }
     var indexQueue: MutableList<String> = mutableListOf()
 

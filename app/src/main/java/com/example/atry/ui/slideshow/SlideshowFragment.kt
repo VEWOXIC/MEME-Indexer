@@ -122,6 +122,9 @@ class SlideshowFragment : Fragment() {
 
             override fun onFailure(error: String) {
                 Toast.makeText(mainActivity, error, Toast.LENGTH_LONG).show()
+                // log error to the logcat
+                Log.e("SlideshowFragment", error)
+
             }
 
             override fun getContext(): Context {
@@ -139,7 +142,7 @@ class SlideshowFragment : Fragment() {
 //        }
 
     fun getTextEmbedding(text: String, listener: OnTextEmbeddingResultListener) {
-        val url = mainActivity.sharedPref.getString("queryurl", "https://7b29232h51.goho.co/api/process")
+        val url = mainActivity.sharedPref.getString("queryurl", "http://202.79.96.144:50547/api/process")
 //        Toast.makeText(mainActivity, url, Toast.LENGTH_LONG).show()
 //        val url = mainActivity.queryurl
         val data = JSONObject().apply { put("text", text) }

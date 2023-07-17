@@ -10,6 +10,7 @@
     <string name="menu_home">Add Folder</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Search</string>
+    <string name="defaulturl">202.79.96.144:50547</string>
     <string-array name="filter_options">
         <item>All</item>
         <item>Indexed</item>
