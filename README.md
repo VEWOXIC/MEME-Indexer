@@ -11,12 +11,12 @@ A CLIP-based meme indexer app that can manage and search the memes on your phone
 
 ## NEW SERVER ADDRESS!!!
 
-> July 17 2023
+> Jan 11 2024 **[BACK ONLINE!]**
 
 The original CLIP backend server stops for service. The new server address is as below: 
 
 ```bash
-http://202.79.96.144:50547/api/process
+http://34.235.153.23:11452/api/process
 ```
 
 Please go to settings->server address to change it! Note that v0.2.0 does not support plaintext http connection, please upgrade to v0.2.1. 
